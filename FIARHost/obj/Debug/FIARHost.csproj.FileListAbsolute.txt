@@ -21,3 +21,26 @@ C:\Users\Rodin\Desktop\Csharp FinalProject\FIARHost\FIARHost\bin\Debug\EntityFra
 C:\Users\Rodin\Desktop\Csharp FinalProject\FIARHost\FIARHost\bin\Debug\EntityFramework.xml
 C:\Users\Rodin\Desktop\Csharp FinalProject\FIARHost\FIARHost\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Rodin\Desktop\Csharp FinalProject\FIARHost\FIARHost\bin\Debug\EntityFramework.SqlServer.xml
+D:\Csharp final project\Csharp-final-project-host\FIARHost\bin\Debug\FIARHost.exe.config
+D:\Csharp final project\Csharp-final-project-host\FIARHost\bin\Debug\FIARHost.exe
+D:\Csharp final project\Csharp-final-project-host\FIARHost\bin\Debug\FIARHost.pdb
+D:\Csharp final project\Csharp-final-project-host\FIARHost\bin\Debug\EntityFramework.dll
+D:\Csharp final project\Csharp-final-project-host\FIARHost\bin\Debug\EntityFramework.SqlServer.dll
+D:\Csharp final project\Csharp-final-project-host\FIARHost\bin\Debug\EntityFramework.xml
+D:\Csharp final project\Csharp-final-project-host\FIARHost\bin\Debug\EntityFramework.SqlServer.xml
+D:\Csharp final project\Csharp-final-project-host\FIARHost\bin\Debug\WcfFIARService.pdb
+D:\Csharp final project\Csharp-final-project-host\FIARHost\bin\Debug\WcfFIARService.dll.config
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\FIARHost.csprojAssemblyReference.cache
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\MainWindow.g.cs
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\App.g.cs
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\FIARHost_MarkupCompile.cache
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\FIARHost_MarkupCompile.lref
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\MainWindow.baml
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\FIARHost.g.resources
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\FIARHost.Properties.Resources.resources
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\FIARHost.csproj.GenerateResource.cache
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\FIARHost.csproj.CoreCompileInputs.cache
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\FIARHost.csproj.CopyComplete
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\FIARHost.exe
+D:\Csharp final project\Csharp-final-project-host\FIARHost\obj\Debug\FIARHost.pdb
+D:\Csharp final project\Csharp-final-project-host\FIARHost\bin\Debug\WcfFIARService.dll
