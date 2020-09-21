@@ -362,3 +362,7 @@ MigrationBackup/
 FodyWeavers.xsd
 FIARHost/obj/Debug/FIARHost.csproj.CoreCompileInputs.cache
 *.cache
+*.baml
+*.lref
+*.cache
+*.cache
