@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FIARHost"
         mc:Ignorable="d"
-        Title="MainWindow" Height="136.286" Width="316.571" Initialized="Window_Initialized">
-    <Grid Margin="0,0,589,342">
-        <Label Name="label" Margin="0,0,-308,-104"/>
+        Title="MainWindow" Height="600" Width="272.987" Initialized="Window_Initialized">
+    <Grid Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DataGrid  Name="dgData" Margin="5" Grid.Row="0"  AutoGenerateColumns="false" FlowDirection="LeftToRight">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Width="50" Binding="{Binding Date}" />
+                <DataGridTextColumn Header="Message" Width="200" Binding="{Binding Message}" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

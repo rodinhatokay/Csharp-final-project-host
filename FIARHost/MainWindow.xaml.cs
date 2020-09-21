@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WcfFIARService;
 
 namespace FIARHost
 {
@@ -28,20 +29,30 @@ namespace FIARHost
         }
 
         ServiceHost host;
-
+        private List<ServerEvent> events;
         private void Window_Initialized(object sender, EventArgs e)
         {
-            host = new ServiceHost(typeof(WcfFIARService.FIARService));
-            host.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });
+            events = new List<ServerEvent>();
+            FIARService sv = new FIARService(messagesHandler);
+            host = new ServiceHost(sv);
+            host.Description.Behaviors.Add(new ServiceMetadataBehavior { HttpGetEnabled = true });
+
             try
             {
                 host.Open();
-                label.Content = "Service is running";
+                dgData.ItemsSource = new List<ServerEvent>(events);
+
             }
-            catch( Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void messagesHandler(string msg, DateTime datetime)
+        {
+            events.Add(new ServerEvent { Date = datetime, Message = msg });
+            dgData.ItemsSource = new List<ServerEvent>(events); ;
         }
     }
 }
