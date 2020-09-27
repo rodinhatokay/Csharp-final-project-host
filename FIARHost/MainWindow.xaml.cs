@@ -29,10 +29,10 @@ namespace FIARHost
         }
 
         ServiceHost host;
-        private List<ServerEvent> events;
+        private List<ServerEvent> _events;
         private void Window_Initialized(object sender, EventArgs e)
         {
-            events = new List<ServerEvent>();
+            _events = new List<ServerEvent>();
             FIARService sv = new FIARService(messagesHandler);
             host = new ServiceHost(sv);
             host.Description.Behaviors.Add(new ServiceMetadataBehavior { HttpGetEnabled = true });
@@ -40,7 +40,7 @@ namespace FIARHost
             try
             {
                 host.Open();
-                dgData.ItemsSource = new List<ServerEvent>(events);
+                dgData.ItemsSource = new List<ServerEvent>(_events);
 
             }
             catch (Exception ex)
@@ -51,8 +51,8 @@ namespace FIARHost
 
         private void messagesHandler(string msg, DateTime datetime)
         {
-            events.Add(new ServerEvent { Date = datetime, Message = msg });
-            dgData.ItemsSource = new List<ServerEvent>(events); ;
+            _events.Add(new ServerEvent { Date = datetime, Message = msg });
+            dgData.ItemsSource = new List<ServerEvent>(_events); ;
         }
     }
 }
