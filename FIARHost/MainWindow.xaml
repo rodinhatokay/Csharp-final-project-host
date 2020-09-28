@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FIARHost"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="272.987" Initialized="Window_Initialized">
+        Title="MainWindow" Height="600" Width="476" ResizeMode="NoResize" Initialized="Window_Initialized">
+
     <Grid Margin="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -14,10 +15,10 @@
 
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <DataGrid  Name="dgData" Margin="5" Grid.Row="0"  AutoGenerateColumns="false" FlowDirection="LeftToRight">
+        <DataGrid IsReadOnly="True"  Name="dgData" Margin="5" Grid.Row="0"  AutoGenerateColumns="false" FlowDirection="LeftToRight">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Date" Width="50" Binding="{Binding Date}" />
-                <DataGridTextColumn Header="Message" Width="200" Binding="{Binding Message}" />
+                <DataGridTextColumn Header="Date" Width="150" Binding="{Binding Date}" />
+                <DataGridTextColumn Header="Message" Width="300" Binding="{Binding Message}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

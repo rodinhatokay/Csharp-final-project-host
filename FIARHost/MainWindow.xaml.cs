@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,18 +31,24 @@ namespace FIARHost
         }
 
         ServiceHost host;
-        private List<ServerEvent> _events;
+        private ObservableCollection<ServerEvent> events;
+
+
         private void Window_Initialized(object sender, EventArgs e)
         {
-            _events = new List<ServerEvent>();
+            events = new ObservableCollection<ServerEvent>();
+
             FIARService sv = new FIARService(messagesHandler);
+
             host = new ServiceHost(sv);
             host.Description.Behaviors.Add(new ServiceMetadataBehavior { HttpGetEnabled = true });
 
             try
             {
+
+                dgData.ItemsSource = events;
                 host.Open();
-                dgData.ItemsSource = new List<ServerEvent>(_events);
+
 
             }
             catch (Exception ex)
@@ -49,10 +57,21 @@ namespace FIARHost
             }
         }
 
+
+
         private void messagesHandler(string msg, DateTime datetime)
         {
-            _events.Add(new ServerEvent { Date = datetime, Message = msg });
-            dgData.ItemsSource = new List<ServerEvent>(_events); ;
+            try
+            {
+                this.Dispatcher.Invoke(() =>
+                {
+                    events.Add(new ServerEvent { Date = datetime, Message = msg });
+                });
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

@@ -8,6 +8,8 @@ namespace FIARHost
 {
     public class ServerEvent
     {
+
+
         public DateTime Date { get; set; }
         public string Message { get; set; }
 
