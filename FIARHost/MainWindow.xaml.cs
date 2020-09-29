@@ -58,7 +58,6 @@ namespace FIARHost
         }
 
 
-
         private void messagesHandler(string msg, DateTime datetime)
         {
             try
